@@ -118,4 +118,20 @@
     [self waitForExpectationsWithTimeout:2.0 handler:nil];
 }
 
+// LoginServiceTests.m (新测试 - RED)
+- (void)testLoginShouldValidateCredentialsBeforeAttempting {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Login should fail"];
+    
+    LoginCredentials *credentials = [[LoginCredentials alloc] initWithUsername:@"ab" // 太短
+                                                                      password:@"123"]; // 太短
+    
+    [self.loginService loginWithCredentials:credentials completion:^(LoginResult *result) {
+        XCTAssertFalse(result.success);
+        XCTAssertEqualObjects(result.error.domain, @"ValidationError");
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:1.0 handler:nil];
+}
+
 @end
