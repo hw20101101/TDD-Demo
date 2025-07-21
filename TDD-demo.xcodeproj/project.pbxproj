@@ -17,6 +17,7 @@
 		9D12B3B02E2E1BD3009F1129 /* TDD_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D12B3AF2E2E1BD3009F1129 /* TDD_demoTests.m */; };
 		9D12B3BA2E2E1BD3009F1129 /* TDD_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D12B3B92E2E1BD3009F1129 /* TDD_demoUITests.m */; };
 		9D12B3BC2E2E1BD3009F1129 /* TDD_demoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D12B3BB2E2E1BD3009F1129 /* TDD_demoUITestsLaunchTests.m */; };
+		9D12B3CA2E2E1CE5009F1129 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D12B3C92E2E1CE5009F1129 /* LoginService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		9D12B3B52E2E1BD3009F1129 /* TDD-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TDD-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D12B3B92E2E1BD3009F1129 /* TDD_demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDD_demoUITests.m; sourceTree = "<group>"; };
 		9D12B3BB2E2E1BD3009F1129 /* TDD_demoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDD_demoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		9D12B3C82E2E1CE5009F1129 /* LoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		9D12B3C92E2E1CE5009F1129 /* LoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				9D12B3A12E2E1BD2009F1129 /* LaunchScreen.storyboard */,
 				9D12B3A42E2E1BD2009F1129 /* Info.plist */,
 				9D12B3A52E2E1BD2009F1129 /* main.m */,
+				9D12B3C82E2E1CE5009F1129 /* LoginService.h */,
+				9D12B3C92E2E1CE5009F1129 /* LoginService.m */,
 			);
 			path = "TDD-demo";
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			files = (
 				9D12B39B2E2E1BD0009F1129 /* ViewController.m in Sources */,
 				9D12B3952E2E1BD0009F1129 /* AppDelegate.m in Sources */,
+				9D12B3CA2E2E1CE5009F1129 /* LoginService.m in Sources */,
 				9D12B3A62E2E1BD2009F1129 /* main.m in Sources */,
 				9D12B3982E2E1BD0009F1129 /* SceneDelegate.m in Sources */,
 			);
@@ -456,6 +462,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,6 +490,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
