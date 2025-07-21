@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)validateUsername:(NSString *)username;
 
+// LoginService.h (添加新方法)
+- (BOOL)validatePassword:(NSString *)password;
+
 @end
 
 NS_ASSUME_NONNULL_END

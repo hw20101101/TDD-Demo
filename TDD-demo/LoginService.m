@@ -14,4 +14,9 @@
     return username.length >= 3;
 }
 
+// LoginService.m (实现 - GREEN)
+- (BOOL)validatePassword:(NSString *)password {
+    return password.length >= 6;
+}
+
 @end

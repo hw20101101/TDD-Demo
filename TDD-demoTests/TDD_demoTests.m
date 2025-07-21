@@ -66,4 +66,15 @@
     XCTAssertTrue([self.loginService validateUsername:@"abc"]);
 }
 
+// LoginServiceTests.m (新测试 - RED)
+- (void)testEmptyPasswordShouldBeInvalid {
+    BOOL isValid = [self.loginService validatePassword:@""];
+    XCTAssertFalse(isValid);
+}
+
+- (void)testPasswordShouldHaveMinimumLength {
+    XCTAssertFalse([self.loginService validatePassword:@"12345"]);
+    XCTAssertTrue([self.loginService validatePassword:@"123456"]);
+}
+
 @end
