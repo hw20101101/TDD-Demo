@@ -8,6 +8,7 @@
 #import <XCTest/XCTest.h>
 #import "LoginService.h"
 #import "LoginCredentials.h"
+#import "LoginResult.h"
 
 @interface TDD_demoTests : XCTestCase
 
@@ -85,6 +86,20 @@
                                                                       password:@"secret123"];
     XCTAssertEqualObjects(credentials.username, @"john");
     XCTAssertEqualObjects(credentials.password, @"secret123");
+}
+
+// LoginServiceTests.m (新测试 - RED)
+- (void)testLoginResultShouldIndicateSuccess {
+    LoginResult *result = [[LoginResult alloc] initWithSuccess:YES error:nil];
+    XCTAssertTrue(result.success);
+    XCTAssertNil(result.error);
+}
+
+- (void)testLoginResultShouldIndicateFailure {
+    NSError *error = [NSError errorWithDomain:@"LoginError" code:401 userInfo:nil];
+    LoginResult *result = [[LoginResult alloc] initWithSuccess:NO error:error];
+    XCTAssertFalse(result.success);
+    XCTAssertNotNil(result.error);
 }
 
 @end
