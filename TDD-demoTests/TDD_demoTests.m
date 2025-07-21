@@ -102,4 +102,20 @@
     XCTAssertNotNil(result.error);
 }
 
+// LoginServiceTests.m (新测试 - RED)
+- (void)testLoginWithValidCredentialsShouldSucceed {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Login should succeed"];
+    
+    LoginCredentials *credentials = [[LoginCredentials alloc] initWithUsername:@"testuser"
+                                                                      password:@"password123"];
+    
+    [self.loginService loginWithCredentials:credentials completion:^(LoginResult *result) {
+        XCTAssertTrue(result.success);
+        XCTAssertNil(result.error);
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:2.0 handler:nil];
+}
+
 @end

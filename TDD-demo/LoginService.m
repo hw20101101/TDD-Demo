@@ -19,4 +19,24 @@
     return password.length >= 6;
 }
 
+// LoginService.m (实现 - GREEN)
+- (void)loginWithCredentials:(LoginCredentials *)credentials
+                  completion:(LoginCompletionHandler)completion {
+    // 模拟异步操作
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)),
+                   dispatch_get_main_queue(), ^{
+        if ([credentials.username isEqualToString:@"testuser"] &&
+            [credentials.password isEqualToString:@"password123"]) {
+            LoginResult *result = [[LoginResult alloc] initWithSuccess:YES error:nil];
+            completion(result);
+        } else {
+            NSError *error = [NSError errorWithDomain:@"LoginError"
+                                                 code:401
+                                             userInfo:@{NSLocalizedDescriptionKey: @"Invalid credentials"}];
+            LoginResult *result = [[LoginResult alloc] initWithSuccess:NO error:error];
+            completion(result);
+        }
+    });
+}
+
 @end

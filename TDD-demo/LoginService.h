@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LoginResult.h"
+#import "LoginCredentials.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 // LoginService.h (添加新方法)
 - (BOOL)validatePassword:(NSString *)password;
+
+// LoginService.h (添加新方法)
+typedef void(^LoginCompletionHandler)(LoginResult *result);
+- (void)loginWithCredentials:(LoginCredentials *)credentials
+                  completion:(LoginCompletionHandler)completion;
 
 @end
 
