@@ -60,5 +60,10 @@
     XCTAssertTrue(isValid, @"Valid username should be valid");
 }
 
+// LoginServiceTests.m (新测试 - RED)
+- (void)testUsernameShouldHaveMinimumLength {
+    XCTAssertFalse([self.loginService validateUsername:@"ab"]);
+    XCTAssertTrue([self.loginService validateUsername:@"abc"]);
+}
 
 @end

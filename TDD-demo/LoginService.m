@@ -9,9 +9,9 @@
 
 @implementation LoginService
 
+// LoginService.m (更新实现 - GREEN)
 - (BOOL)validateUsername:(NSString *)username {
-    // GREEN: 最简单的实现让测试通过
-    return username.length > 0;
+    return username.length >= 3;
 }
 
 @end
