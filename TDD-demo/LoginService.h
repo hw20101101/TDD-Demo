@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginService : NSObject
 
+- (BOOL)validateUsername:(NSString *)username;
+
 @end
 
 NS_ASSUME_NONNULL_END
