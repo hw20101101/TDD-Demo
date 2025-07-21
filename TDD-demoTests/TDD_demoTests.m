@@ -7,6 +7,7 @@
 
 #import <XCTest/XCTest.h>
 #import "LoginService.h"
+#import "LoginCredentials.h"
 
 @interface TDD_demoTests : XCTestCase
 
@@ -72,9 +73,18 @@
     XCTAssertFalse(isValid);
 }
 
+// 密码验证 (新测试
 - (void)testPasswordShouldHaveMinimumLength {
     XCTAssertFalse([self.loginService validatePassword:@"12345"]);
     XCTAssertTrue([self.loginService validatePassword:@"123456"]);
+}
+
+// LoginServiceTests.m (新测试 - RED)
+- (void)testLoginCredentialsShouldStoreUsernameAndPassword {
+    LoginCredentials *credentials = [[LoginCredentials alloc] initWithUsername:@"john"
+                                                                      password:@"secret123"];
+    XCTAssertEqualObjects(credentials.username, @"john");
+    XCTAssertEqualObjects(credentials.password, @"secret123");
 }
 
 @end

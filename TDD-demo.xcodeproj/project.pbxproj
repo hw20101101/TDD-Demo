@@ -18,6 +18,7 @@
 		9D12B3BA2E2E1BD3009F1129 /* TDD_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D12B3B92E2E1BD3009F1129 /* TDD_demoUITests.m */; };
 		9D12B3BC2E2E1BD3009F1129 /* TDD_demoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D12B3BB2E2E1BD3009F1129 /* TDD_demoUITestsLaunchTests.m */; };
 		9D12B3CA2E2E1CE5009F1129 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D12B3C92E2E1CE5009F1129 /* LoginService.m */; };
+		9D12B3CD2E2E24DC009F1129 /* LoginCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D12B3CC2E2E24DC009F1129 /* LoginCredentials.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		9D12B3BB2E2E1BD3009F1129 /* TDD_demoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDD_demoUITestsLaunchTests.m; sourceTree = "<group>"; };
 		9D12B3C82E2E1CE5009F1129 /* LoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
 		9D12B3C92E2E1CE5009F1129 /* LoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		9D12B3CB2E2E24DC009F1129 /* LoginCredentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginCredentials.h; sourceTree = "<group>"; };
+		9D12B3CC2E2E24DC009F1129 /* LoginCredentials.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginCredentials.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				9D12B3A52E2E1BD2009F1129 /* main.m */,
 				9D12B3C82E2E1CE5009F1129 /* LoginService.h */,
 				9D12B3C92E2E1CE5009F1129 /* LoginService.m */,
+				9D12B3CB2E2E24DC009F1129 /* LoginCredentials.h */,
+				9D12B3CC2E2E24DC009F1129 /* LoginCredentials.m */,
 			);
 			path = "TDD-demo";
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			files = (
 				9D12B39B2E2E1BD0009F1129 /* ViewController.m in Sources */,
 				9D12B3952E2E1BD0009F1129 /* AppDelegate.m in Sources */,
+				9D12B3CD2E2E24DC009F1129 /* LoginCredentials.m in Sources */,
 				9D12B3CA2E2E1CE5009F1129 /* LoginService.m in Sources */,
 				9D12B3A62E2E1BD2009F1129 /* main.m in Sources */,
 				9D12B3982E2E1BD0009F1129 /* SceneDelegate.m in Sources */,
