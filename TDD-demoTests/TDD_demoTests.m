@@ -6,6 +6,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LoginService.h"
 
 @interface TDD_demoTests : XCTestCase
 
@@ -31,6 +32,12 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testLoginServiceExists {
+    // RED: 这个测试会失败，因为 LoginService 类还不存在
+    LoginService *service = [[LoginService alloc] init];
+    XCTAssertNotNil(service, @"Login service should exist");
 }
 
 @end
