@@ -48,10 +48,17 @@
     XCTAssertNotNil(self.loginService, @"Login service should exist");
 }
 
-// RED: 新测试 - 空用户名应该无效
+// RED: 测试空用户名
 - (void)testEmptyUsernameShouldBeInvalid {
     BOOL isValid = [self.loginService validateUsername:@""];
     XCTAssertFalse(isValid, @"Empty username should be invalid");
 }
+
+// RED: 测试有效用户名
+- (void)testValidUsernameShouldBeValid {
+    BOOL isValid = [self.loginService validateUsername:@"john"];
+    XCTAssertTrue(isValid, @"Valid username should be valid");
+}
+
 
 @end

@@ -11,7 +11,7 @@
 
 - (BOOL)validateUsername:(NSString *)username {
     // GREEN: 最简单的实现让测试通过
-    return NO;
+    return username.length > 0;
 }
 
 @end
