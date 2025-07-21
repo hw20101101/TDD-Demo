@@ -10,16 +10,20 @@
 
 @interface TDD_demoTests : XCTestCase
 
+@property (nonatomic, strong) LoginService *loginService;
+
 @end
 
 @implementation TDD_demoTests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.loginService = [[LoginService alloc] init];
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.loginService = nil;
 }
 
 - (void)testExample {
@@ -34,10 +38,20 @@
     }];
 }
 
+//- (void)testLoginServiceExists {
+//    // RED: 这个测试会失败，因为 LoginService 类还不存在
+//    LoginService *service = [[LoginService alloc] init];
+//    XCTAssertNotNil(service, @"Login service should exist");
+//}
+
 - (void)testLoginServiceExists {
-    // RED: 这个测试会失败，因为 LoginService 类还不存在
-    LoginService *service = [[LoginService alloc] init];
-    XCTAssertNotNil(service, @"Login service should exist");
+    XCTAssertNotNil(self.loginService, @"Login service should exist");
+}
+
+// RED: 新测试 - 空用户名应该无效
+- (void)testEmptyUsernameShouldBeInvalid {
+    BOOL isValid = [self.loginService validateUsername:@""];
+    XCTAssertFalse(isValid, @"Empty username should be invalid");
 }
 
 @end
